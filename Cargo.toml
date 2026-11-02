@@ -1,0 +1,20 @@
+[package]
+name = "mayu"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Siddid-Soni/mayu-run"
+description = "Run commands under a shared CPU and memory budget so parallel coding agents don't thrash the machine"
+readme = "README.md"
+keywords = ["cgroups", "systemd", "scheduler", "agents", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+exclude = ["/.github", "/scripts", "/docs/superpowers", "/AGENTS.md", "/CLAUDE.md", "/CONTRIBUTING.md", "/CODE_OF_CONDUCT.md"]
+
+# Binaries: `mayu` (src/main.rs) and `mayu-run` (src/bin/mayu-run.rs), the same program under a second name.
+
+[dependencies]
+
+[lints.clippy]
+# Every `unsafe` block (libc calls) needs a `// SAFETY:` comment.
+undocumented_unsafe_blocks = "warn"
